@@ -100,13 +100,16 @@ textarea {
   body {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 83%, rgba(196,25,137,1) 100%);
-    padding-top: 50px;
     max-width: 1200px;
     margin:auto;
   }
 
   .secondary{
-    color: #40b1dd;
+    color: rgb(64,177,221);
+  }
+
+  picture img {
+    max-width: 200px;
   }
 
   .primary{
@@ -150,9 +153,64 @@ textarea {
     padding-top: 10px;
    }
 
-   #hero-slider{
-
+   #nav-bar{
+     position:fixed;
+     top:0;
+     background-color: #000 !important;
+     width: 100%;
+     z-index: 1;
+     max-width:1200px;
    }
+   #navbarNav {
+     justify-content: flex-end;
+   }
+
+   .nav-item {
+    border: 1px solid rgba(196,25,137,1);
+    min-width: 75px;
+    margin: 0px 2px;
+    text-align: center;
+   }
+   #navbarNav ul.navbar-nav li.nav-item a.nav-link{
+     color: rgba(196,25,137,1);
+   }
+
+   #navbarNav ul.navbar-nav li.nav-item:hover a.nav-link{
+     color:white;
+   }
+
+   .nav-item:hover {
+    border-color: rgb(64,177,221);
+    background-color: rgb(64,177,221);
+    color: white;
+   }
+
+   .nav-item:hover{
+     color:white;
+   }
+   .flexwrapper {
+     display:inline-flex;
+   }
+
+   .flexwrapper div{
+     align-self: center;
+   }
+
+
+
+   .navbar-light span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(64,177,221)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: white;
+  }
+  /* change hamburger button border color */
+   #mobile-nav.navbar-toggler {
+    border-color: rgba(196,25,137,1);
+  }
+  #mobile-nav:focus {
+    border-color: rgb(64,177,221);
+    outline: none;
+    box-shadow: none;
+  }
 
    #media-player{
      text-align: center;
@@ -174,11 +232,20 @@ textarea {
       background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_937.jpg");
       height: 470px;
      }
+     .icons {
+       font-size: 1.5em;
+     }
    }
    @media (min-width: 955px){
     #hero {
-      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1278.jpg");
+      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1435.jpg");
       height: 702px;
+     }
+     picture img {
+       max-width: 400px;
+     }
+     .icons {
+       font-size:1.75em;
      }
    }
    /* @media (min-width: 1200px){
