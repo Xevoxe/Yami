@@ -178,6 +178,7 @@ textarea {
    }
    .flexwrapper {
      display:inline-flex;
+     width:40%;
    }
 
    .flexwrapper div{
