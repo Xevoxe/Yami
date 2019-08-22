@@ -226,9 +226,8 @@ textarea {
    }
    @media (min-width: 768px){
     #hero {
-      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1435.jpg");
-      height: 435px;
-      background-size:contain;
+      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_937.jpg");
+      height: 515px;
      }
      picture img {
        max-width: 400px;
@@ -240,7 +239,13 @@ textarea {
    @media (min-width: 1000px){
     #hero {
       background-image: url("../img/herobg_btsopr//herobg_btsopr_c_scale\,w_1794.jpg");
-      height: 575px;
+      background-size:contain;
+      height:650px;
+     }
+   }
+   @media (min-width: 1200px){
+    #hero {
+      height:700px;
      }
    }
 
