@@ -97,6 +97,152 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+  body {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 83%, rgba(196,25,137,1) 100%);
+    max-width: 1000px;
+    margin:auto;
+  }
+
+  .secondary{
+    color: rgb(64,177,221);
+  }
+
+  picture img {
+    max-width: 200px;
+  }
+
+  .primary{
+    color: rgba(196,25,137,1);
+  }
+
+   img {
+     max-width: 100%;
+     max-height: 100%;
+   }
+    hr {
+     background-color: rgba(196,25,137,1);
+     border: none;
+     height: 5px;
+   }
+
+   aside hr:nth-of-type(2){
+     width:50%;
+     height: 2px;
+     margin:auto;
+   }
+   #hero {
+    background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_657.jpg");
+    background-color:black;
+    height: 360px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 10px;
+   }
+
+   #nav-bar{
+     position:fixed;
+     top:0;
+     background-color: #000 !important;
+     width: 100%;
+     z-index: 1;
+     max-width:1000px;
+   }
+   #navbarNav {
+     justify-content: flex-end;
+   }
+
+   .nav-item {
+    border: 1px solid rgba(196,25,137,1);
+    min-width: 75px;
+    margin: 0px 2px;
+    text-align: center;
+   }
+   #navbarNav ul.navbar-nav li.nav-item a.nav-link{
+     color: rgba(196,25,137,1);
+   }
+
+   #navbarNav ul.navbar-nav li.nav-item:hover a.nav-link{
+     color:white;
+   }
+
+   .nav-item:hover {
+    border-color: rgb(64,177,221);
+    background-color: rgb(64,177,221);
+    color: white;
+   }
+
+   .nav-item:hover{
+     color:white;
+   }
+   .flexwrapper {
+     display:inline-flex;
+   }
+
+   .flexwrapper div{
+     align-self: center;
+   }
+
+
+
+   .navbar-light span.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(64,177,221)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    color: white;
+  }
+  /* change hamburger button border color */
+   #mobile-nav.navbar-toggler {
+    border-color: rgba(196,25,137,1);
+  }
+  #mobile-nav:focus {
+    border-color: rgb(64,177,221);
+    outline: none;
+    box-shadow: none;
+  }
+
+   #media-player{
+     text-align: center;
+   }
+
+   header figure{
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img//Yamilogo.png");
+    width: 100%;
+    height: 70px;
+    margin: 10px 0px;
+   }
+   
+
+   @media (min-width: 400px){
+     #hero {
+      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_937.jpg");
+      height: 515px;
+     }
+     .icons {
+       font-size: 1.5em;
+     }
+   }
+   @media (min-width: 768px){
+    #hero {
+      background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1435.jpg");
+      height: 435px;
+      background-size:contain;
+     }
+     picture img {
+       max-width: 400px;
+     }
+     .icons {
+       font-size:1.75em;
+     }
+   }
+   @media (min-width: 1000px){
+    #hero {
+      background-image: url("../img/herobg_btsopr//herobg_btsopr_c_scale\,w_1794.jpg");
+      height: 575px;
+     }
+   }
 
 /* ==========================================================================
    Helper classes
