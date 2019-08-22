@@ -100,7 +100,7 @@ textarea {
   body {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 83%, rgba(196,25,137,1) 100%);
-    max-width: 1200px;
+    max-width: 1000px;
     margin:auto;
   }
 
@@ -131,22 +131,10 @@ textarea {
      height: 2px;
      margin:auto;
    }
-
-   .jumbotron {
-    background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1794.jpg");
-    background-position: top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin-bottom: 0px !important;
-    border-radius: 0 !important;
-    padding-top: 10px;
-    min-height:66vh;
-   }
-
    #hero {
     background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_657.jpg");
     background-color:black;
-    height: 315px;
+    height: 360px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: top;
@@ -159,7 +147,7 @@ textarea {
      background-color: #000 !important;
      width: 100%;
      z-index: 1;
-     max-width:1200px;
+     max-width:1000px;
    }
    #navbarNav {
      justify-content: flex-end;
@@ -230,16 +218,17 @@ textarea {
    @media (min-width: 400px){
      #hero {
       background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_937.jpg");
-      height: 470px;
+      height: 515px;
      }
      .icons {
        font-size: 1.5em;
      }
    }
-   @media (min-width: 955px){
+   @media (min-width: 768px){
     #hero {
       background-image: url("../img/herobg_btsopr/herobg_btsopr_c_scale\,w_1435.jpg");
-      height: 702px;
+      height: 435px;
+      background-size:contain;
      }
      picture img {
        max-width: 400px;
@@ -248,12 +237,12 @@ textarea {
        font-size:1.75em;
      }
    }
-   /* @media (min-width: 1200px){
+   @media (min-width: 1000px){
     #hero {
       background-image: url("../img/herobg_btsopr//herobg_btsopr_c_scale\,w_1794.jpg");
-      height: 712px;
+      height: 575px;
      }
-   } */
+   }
 
 /* ==========================================================================
    Helper classes
