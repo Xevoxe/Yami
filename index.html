@@ -15,14 +15,14 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
   <script src="https://kit.fontawesome.com/82068eb64a.js"></script>
 </head>
 
 <body>
-  <header class="container-fluid p-0">
-      <div id="nav-bar" class="navbar-light bg-light">
+    <div id="nav-bar" class="navbar-light bg-light">
         <nav class="navbar navbar-expand-lg">
           <div class="flexwrapper">
             <picture>
@@ -36,11 +36,6 @@
                 src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
                 alt="">
                 </picture>
-            <div class="icons d-flex">
-                <i class="fab fa-facebook secondary"></i>
-                <i class="fab fa-twitter secondary"></i>
-                <i class="fab fa-instagram secondary"></i>
-            </div>
           </div>
             <button id="mobile-nav" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon secondary"></span>
@@ -66,6 +61,7 @@
             </div>
           </nav>
       </div>
+  <header class="container-fluid p-0">
     <div id="hero" class="Jumbotron Jumbotron-fluid">
       <div id="hero-slider" class="container-fluid row">
       </div>
@@ -88,7 +84,54 @@
       <article><img src=https://via.placeholder.com/400x300?text=DevLog+2></article>
     </aside>
   </main>
-  <footer>Footer</footer>
+
+  <footer id="footer container-fluid">
+    <div id="footer-wrapper">
+      <div id="footer-img">
+        <picture id="footer-picture">
+            <source
+              media="(max-width: 496px)"
+              sizes="(max-width: 496) 100vw, 496px"
+              srcset="
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_406.jpg 406w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_496.jpg 496w,"
+              >
+              <img 
+                sizes="(max-width: 1400) 100vw, 960px"
+                srcset="
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_480.jpg 480w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_602.jpg 602w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_709.jpg 709w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_810.jpg 810w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_910.jpg 910w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_990.jpg 990w,
+                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg 1008w,
+                "
+                src="img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg"
+                alt="Footer Image"
+              >
+          </picture>
+      </div>
+        <div class="footerBox secondary">
+              <ul class="list-group icons">
+                  <li>
+                    <a href="https://www.facebook.com/TumultuousProductions"><i class="fab fa-facebook secondary"></i></a>
+                  </li>
+                  <li>
+                      <a href="https://twitter.com/TumultuousGame"><i class="fab fa-twitter secondary"></i></a>
+                  </li>
+              </ul>
+              <ul class="list-group">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Dev-Logs</li>
+                <li>Media</li>
+                <li>Contact Us</li>
+              </ul>
+          </div>
+          </div> 
+  </footer>
+
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
