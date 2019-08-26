@@ -11,7 +11,7 @@ window.onresize= ()=> {
 };
 
 window.onbeforeunload = ()=>{
-    window.scrollTo(0,0);
+    // window.scrollTo(0,0);
 }
 
 const resizeReload = ()=> {
