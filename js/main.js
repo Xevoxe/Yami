@@ -1,5 +1,8 @@
 
 //
+document.addEventListener("DOMContentLoaded", function(){
+    // Handler when the DOM is fully loaded
+document.read
 let resizeId;
 
 window.onresize= ()=> {
@@ -19,6 +22,8 @@ const stickyElement = (pos,element) =>{
     let elmt = document.getElementById(element);
     return function () {
         let scrollPos = window.pageYOffset;
+        // console.log(scrollPos);
+        // console.log(`Sticky = ${stickyPos}`)
         if(scrollPos >= stickyPos){
             elmt.classList.add("sticky");
         }else{
@@ -30,3 +35,4 @@ const stickyElement = (pos,element) =>{
 const stickyFooter = stickyElement(.50,"footer-img");
 
 document.addEventListener("scroll", stickyFooter);
+});

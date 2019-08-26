@@ -104,6 +104,7 @@ textarea {
     margin:auto;
     font-family: 'Roboto', sans-serif;
     font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600px - 300px)));
+    overscroll-behavior: contain;
   }
 
   .secondary{
