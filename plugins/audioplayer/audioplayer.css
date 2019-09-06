@@ -1,0 +1,42 @@
+.progress-bar {
+    width: 100%;
+    background-color: red;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    align-self: center;
+    max-width:200px;
+    padding: 2px 0px;
+    font-size: .7rem;
+}
+.volume-bar {
+    width: 50%;
+    background-color: green;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    align-self: center;
+    max-width:100px;
+}
+
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.audio-controls{
+    display: flex;
+    flex-direction: row;
+}
+
+i.hidden {
+    display: none;
+}
+
