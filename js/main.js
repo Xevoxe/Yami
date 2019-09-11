@@ -1,23 +1,73 @@
+function getPosition(el) {
+    var xPos = 0;
+    var yPos = 0;
+   
+    while (el) {
+      if (el.tagName == "BODY") {
+        // deal with browser quirks with body/window/document and page scroll
+        var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+        var yScroll = el.scrollTop || document.documentElement.scrollTop;
+   
+        xPos += (el.offsetLeft - xScroll + el.clientLeft);
+        yPos += (el.offsetTop - yScroll + el.clientTop);
+      } else {
+        // for all other non-BODY elements
+        xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+        yPos += (el.offsetTop - el.scrollTop + el.clientTop);
+      }
+   
+      el = el.offsetParent;
+    }
+    return {
+      x: xPos,
+      y: yPos
+    };
+  }
 
-//
 document.addEventListener("DOMContentLoaded", function(){
 
-const stickyElement = (pos,element) =>{
-    let stickyPos = document.getElementById(element).offsetTop - document.documentElement.clientHeight * pos;
+const stickyElement = (className,element,parrallax) =>{
+    
     let elmt = document.getElementById(element);
+    let offSet = elmt.offsetHeight * .10;
+    let stickyPos = getPosition(elmt).y - (window.screen.height * parrallax);
+    console.log(stickyPos);
     return function () {
-        let scrollPos = window.pageYOffset;
+        let scrollPos = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
         // console.log(scrollPos);
         // console.log(`Sticky = ${stickyPos}`)
-        if(scrollPos >= stickyPos){
-            elmt.classList.add("sticky");
+        if(scrollPos  > stickyPos + offSet){
+            elmt.classList.add(className);
         }else{
-            elmt.classList.remove("sticky");
+            elmt.classList.remove(className);
         }
     }
 }
 
-const stickyFooter = stickyElement(.50,"footer-img");
 
-document.addEventListener("scroll", stickyFooter);
+let logo = document.getElementById("logo");
+let navwrapper = document.getElementById("nav-wrapper");
+
+const handleScrollEvent = (evt) =>{
+
+    stickynav();
+    stickyfooter();
+    stickyaudio();
+
+    if(navbar.classList.contains("sticky-nav")){
+        logo.classList.remove('hidden');
+    }else{
+        logo.classList.add('hidden');
+    }
+
+
+}
+// const stickyFooter = stickyElement(,"footer-img");
+let stickynav = stickyElement("sticky-nav","nav-wrapper",0);
+let stickyfooter = stickyElement("sticky","footer-img",.50)
+let stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+
+let navbar = document.getElementById("nav-wrapper");
+
+document.addEventListener("scroll", handleScrollEvent);
 });
