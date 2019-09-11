@@ -16,16 +16,17 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="plugins/audioplayer/audioplayer.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
   <script src="https://kit.fontawesome.com/82068eb64a.js"></script>
 </head>
 
 <body>
-    <div id="nav-bar" class="navbar-light bg-light">
-        <nav class="navbar navbar-expand-lg">
-          <div class="flexwrapper">
+    <div id="nav-bar">
+        <div class="flexwrapper">
             <picture>
                 <img
                 sizes="(max-width: 1000px) 40vw, 400px"
@@ -37,37 +38,51 @@
                 src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
                 alt="">
                 </picture>
-          </div>
-            <button id="mobile-nav" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon secondary"></span>
-            </button>
-            <div class="collapse navbar-collapse mt-1" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Dev-Logs</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Media</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+        </div>
+        <div id="nav-wrapper">
+            <picture id="logo" class="logo hidden">
+                <img
+                sizes="(max-width: 1000px) 40vw, 400px"
+                srcset="
+                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_200.png 200w,
+                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png 366w,
+                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_477.png 477w,
+                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png 756w"
+                src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
+                alt="">
+                </picture>
+          <nav class="navbar navbar-expand-lg">
+              <button id="mobile-nav" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon secondary"></span>
+              </button>
+              <div class="collapse navbar-collapse mt-1" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
-              </ul>
-            </div>
-          </nav>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Dev-Logs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Media</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+              </div>
+            </nav>
+        </div>
       </div>
-  <header class="container-fluid p-0">
+  <header class="header">
     <div id="hero" class="Jumbotron Jumbotron-fluid">
       <div id="hero-slider">
         
       </div>
-      <div id="media-player" class="row">
+      <div id="audio-plugin">
       </div>
     </div>
   </header>
@@ -141,6 +156,7 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script src="js/slider.js"></script>
+  <script src ='plugins/audioplayer/script.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

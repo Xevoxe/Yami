@@ -21,21 +21,22 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
     let player = function (){
         
         let _infoView;
+        this.audioplayer;
 
         const init = ()=>{
             let _wrapper = document.createDocumentFragment();
             
             let _playListComponent = new PlayListComponent(data);
 
-            let _audioPlayer = new AudioPlayerComponent(_playListComponent.playList);            
-            _infoView = new infoBoxView(_audioPlayer);
+            this.audioPlayer = new AudioPlayerComponent(_playListComponent.playList);            
+            _infoView = new infoBoxView(this.audioPlayer);
 
-            _audioPlayer.onSrcChange(handleSrcChange);
+            this.audioPlayer.onSrcChange(handleSrcChange);
             _wrapper.appendChild(_infoView.getElement());
-            _wrapper.appendChild(_audioPlayer.getElement());    
+            _wrapper.appendChild(this.audioPlayer.getElement());    
             document.getElementById(srcElmt).appendChild(_wrapper);
 
-            _audioPlayer.start();
+            this.audioPlayer.start();
 
         }
 
@@ -95,7 +96,7 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
 
         const ProgressBarView = function (className = "progress-bar"){
 
-            let _progress = 50;
+            let _progress;
             let _elmt = document.createElement('DIV');
             let _progressElmt = document.createElement('DIV');
             let _className;
@@ -304,6 +305,9 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
             //Set up listener for when time changes
             _audio.getElement().ontimeupdate = _updateBar;
 
+            //Set starting volume;
+            _adjustVolume(.30);
+
             const _start = ()=>{
                  //start the player
              _handleSrcChange(_srcList[_srcIndex]);
@@ -422,10 +426,6 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
             }
             return new component;
         }
-
-        const changeSrc = ()=>{
-
-        }
         
         init();
     };
@@ -433,4 +433,29 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
     return new player;
 } 
 
-const aplayer = audioplayer_plugin(document,"audio-plugin",data);
+//This is used to autostart the audio when it is able to.
+let aplayer = audioplayer_plugin(document,"audio-plugin",data);
+ (function (){
+    const userInputEventNames = [
+        'click', 'contextmenu', 'auxclick', 'dblclick', 'mousedown',
+        'mouseup', 'pointerup', 'touchend', 'keydown', 'keyup'
+    ];
+
+    function addAudioPlayer(){
+
+        aplayer.audioPlayer.start();
+        userInputEventNames.forEach(eventName => {
+            document.removeEventListener(eventName, addAudioPlayer);
+          });
+
+    }
+
+    userInputEventNames.forEach(eventName => {
+        document.addEventListener(eventName, addAudioPlayer);
+      });
+
+ })();
+
+
+
+
