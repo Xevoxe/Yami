@@ -31,9 +31,7 @@ let carousel_plugin = (document,srcElmt,data) =>{
     };
     
     const init = function (){
-                console.log(this);
                 this.elmt = document.getElementById(srcElmt);
-                console.log(this.elmt);
                 let wrapper = document.createElement("DIV");
                 wrapper.className='slider'; 
                 
