@@ -1,0 +1,48 @@
+.progress-bar {
+    width: 100%;
+    background-color: inherit;
+    color: black;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 25px;
+    align-self: center;
+    max-width:200px;
+    font-size: .7rem;
+    overflow: hidden;
+}
+
+.progression {
+    background-color : red;
+    height: 100%;
+}
+.volume-bar {
+    width: 50%;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+    align-self: center;
+    max-width:100px;
+    overflow: hidden;
+}
+
+.audio-player {
+    display: flex;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.audio-controls{
+    display: flex;
+    flex-direction: row;
+}
+
+i.hidden {
+    display: none;
+}
+
