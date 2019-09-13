@@ -31,11 +31,9 @@ const stickyElement = (className,element,parrallax) =>{
     let elmt = document.getElementById(element);
     let offSet = elmt.offsetHeight * .10;
     let stickyPos = getPosition(elmt).y - (window.screen.height * parrallax);
-    console.log(stickyPos);
+
     return function () {
         let scrollPos = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
-        // console.log(scrollPos);
-        // console.log(`Sticky = ${stickyPos}`)
         if(scrollPos  > stickyPos + offSet){
             elmt.classList.add(className);
         }else{
@@ -47,6 +45,9 @@ const stickyElement = (className,element,parrallax) =>{
 
 let logo = document.getElementById("logo");
 let navwrapper = document.getElementById("nav-wrapper");
+let stickyplayer = document.getElementById('sticky-player-pos');
+let audiopluginpos = document.getElementById('audio-plugin-pos');
+let audioplugin = document.getElementById('audio-plugin');
 
 const handleScrollEvent = (evt) =>{
 
@@ -58,6 +59,13 @@ const handleScrollEvent = (evt) =>{
         logo.classList.remove('hidden');
     }else{
         logo.classList.add('hidden');
+        audiopluginpos.appendChild(audioplugin);
+    }
+
+    if(audioplugin.classList.contains("sticky-audio")){
+        stickyplayer.appendChild(audioplugin);
+    }else {
+        audiopluginpos.appendChild(audioplugin);
     }
 
 
@@ -71,3 +79,7 @@ let navbar = document.getElementById("nav-wrapper");
 
 document.addEventListener("scroll", handleScrollEvent);
 });
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
