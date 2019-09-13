@@ -107,13 +107,25 @@ textarea {
     overscroll-behavior: contain;
   }
 
+  main {
+    padding-bottom:10%;
+  }
+
   .secondary{
     color: rgb(64,177,221);
+  }
+
+  .text-color {
+    color: rgb(219, 245, 255);
   }
 
 
   .primary{
     color: rgba(196,25,137,1);
+  }
+
+  .background-secondary {
+    background-color: rgb(64,177,221);
   }
 
    img {
@@ -134,7 +146,7 @@ textarea {
 
    #hero {
     background-image: url("../img/herobgmobile576.jpg");
-    height: 100vh;
+    height: 80vh;
     background-repeat: no-repeat;
     background-position: top;
     background-size:cover;
@@ -171,7 +183,7 @@ textarea {
     display: flex;
     background-color: black;
     z-index: 999999;
-    justify-content: flex-end;
+    justify-content: space-between;
     max-width: 960px;
    }
 
@@ -295,8 +307,9 @@ textarea {
     }
 
     .sticky-audio {
-      position: fixed;
-      top: 40px;
+      /* position: fixed;
+      top: 6%;
+      left: 35%; */
       z-index: 999999;
       width: 250px;
       padding:0 0 0 2%  !important;
@@ -305,11 +318,35 @@ textarea {
       display:none;
     }
 
+    #sticky-player-pos div:first-child {
+      width: 200px;
+    }
+
     .sticky-nav {
       position: fixed;
       z-index: 99999;
       width: 100%;
       background-color:black;
+      align-items: center;
+    }
+
+    .summary-container {
+      max-height: 175px;
+      overflow: hidden;
+    }
+
+    .dev-log-summary::after{
+      color:white;
+      content: "...";
+    }
+
+    .dev-log {
+      padding:0;
+      text-align: center;
+    }
+
+    hr.background-secondary.dev-log-divider {
+      margin: 10% auto;
     }
 
    /* #1f1035 */
@@ -333,6 +370,22 @@ textarea {
      text-align: center;
    }
 
+   .button {
+    text-decoration: none;
+    border: 1px solid rgb(196, 25, 136);
+    padding: 4%;
+    color: rgb(196, 25, 136)
+  }
+  .button:hover{
+    text-decoration:none;
+  }
+
+  a.button.nav-item {
+    margin-top:5%;
+    display:block;
+  }
+
+
    header figure{
     margin: 0;
     background-position: center;
@@ -349,6 +402,21 @@ textarea {
     justify-content: space-around;
     align-items: center;
    }  
+
+   .content-container img {
+    float: right;
+    margin: 5px 5%;
+   }
+
+   .content-container .divider-img {
+     display:block;
+     margin: 5% auto;
+     float:none;
+
+     
+   }
+
+  
 
    @media (min-width: 575px){
 
@@ -374,6 +442,10 @@ textarea {
     }
 
    @media (min-width: 768px){
+     
+    body p {
+       font-size:16px;
+     }
     #hero {
       background-image: url("../img/herobg_bbvsuq/herobg_bbvsuq_c_scale\,w_960.jpg");
       background-size:contain;

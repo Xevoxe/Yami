@@ -55,7 +55,7 @@ body {
     height: 3rem;
     transform: translateY(-50%);
     cursor:pointer;
-    z-index: 1001;
+    z-index: 99999;
     border: 2px solid rgba(196,25,137,1);
 }
 
