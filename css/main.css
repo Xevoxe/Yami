@@ -167,6 +167,10 @@ textarea {
      color: rgb(64,177,221);
    }
 
+   h1.primary {
+     font-size: 2.5rem;
+   }
+
    #nav-bar{
      display:flex;
      justify-content: space-between;
