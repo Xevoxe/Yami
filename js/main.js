@@ -53,8 +53,16 @@ const handleScrollEvent = (evt) =>{
 
     stickynav();
     stickyfooter();
-    stickyaudio();
 
+    if(stickyaudio){
+      stickyaudio();
+
+      if(audioplugin.classList.contains("sticky-audio")){
+        stickyplayer.appendChild(audioplugin);
+    }else {
+        audiopluginpos.appendChild(audioplugin);
+    }
+    }
     if(navbar.classList.contains("sticky-nav")){
         logo.classList.remove('hidden');
     }else{
@@ -62,18 +70,15 @@ const handleScrollEvent = (evt) =>{
         audiopluginpos.appendChild(audioplugin);
     }
 
-    if(audioplugin.classList.contains("sticky-audio")){
-        stickyplayer.appendChild(audioplugin);
-    }else {
-        audiopluginpos.appendChild(audioplugin);
-    }
-
-
 }
 // const stickyFooter = stickyElement(,"footer-img");
+let stickyaudio;
+
 let stickynav = stickyElement("sticky-nav","nav-wrapper",0);
 let stickyfooter = stickyElement("sticky","footer-img",.50)
-let stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+if(stickyplayer){
+  stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+}
 
 let navbar = document.getElementById("nav-wrapper");
 
