@@ -1,0 +1,40 @@
+body {
+    background-color: #141414;
+}
+
+main {
+    padding: 5% 0;
+    background: #141414;
+    box-shadow: inset 2px 3px 17px black;
+}
+
+h2.media-headings  {
+    font-weight: 200;
+}
+
+.gallery-row {
+    margin: 5% 0;
+    padding: 0px 5%;
+}
+
+.content-container {
+    height: 20vh;
+    margin-top:5%;
+}
+
+.content-container img{
+    -webkit-backface-visibility: hidden; 
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    padding: 0px 2px;
+    background: #0000003b;
+    box-shadow: 1px 1px 1px #00000061;
+    cursor: pointer;
+}

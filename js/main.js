@@ -1,3 +1,5 @@
+
+
 function getPosition(el) {
     var xPos = 0;
     var yPos = 0;
@@ -26,6 +28,7 @@ function getPosition(el) {
 
 document.addEventListener("DOMContentLoaded", function(){
 
+
 const stickyElement = (className,element,parrallax) =>{
     
     let elmt = document.getElementById(element);
@@ -53,32 +56,41 @@ const handleScrollEvent = (evt) =>{
 
     stickynav();
     stickyfooter();
-    stickyaudio();
 
-    if(navbar.classList.contains("sticky-nav")){
-        logo.classList.remove('hidden');
-    }else{
-        logo.classList.add('hidden');
-        audiopluginpos.appendChild(audioplugin);
-    }
+    if(stickyaudio){
+      stickyaudio();
 
-    if(audioplugin.classList.contains("sticky-audio")){
+      if(audioplugin.classList.contains("sticky-audio")){
         stickyplayer.appendChild(audioplugin);
     }else {
         audiopluginpos.appendChild(audioplugin);
     }
-
+    }
+    if(navbar.classList.contains("sticky-nav")){
+        logo.classList.remove('hidden');
+    }else{
+        logo.classList.add('hidden');
+        if(audiopluginpos){
+          audiopluginpos.appendChild(audioplugin);
+        }
+    }
 
 }
 // const stickyFooter = stickyElement(,"footer-img");
+let stickyaudio;
+
 let stickynav = stickyElement("sticky-nav","nav-wrapper",0);
 let stickyfooter = stickyElement("sticky","footer-img",.50)
-let stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+if(stickyplayer){
+  stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+}
 
 let navbar = document.getElementById("nav-wrapper");
 
 document.addEventListener("scroll", handleScrollEvent);
+
 });
+
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);

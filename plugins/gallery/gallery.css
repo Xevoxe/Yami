@@ -1,0 +1,85 @@
+
+.gallery-container {
+    position: relative;
+    padding: 0 4%;
+    height: 100%;
+}
+
+.gallery-mask {
+    height: 100%;
+    overflow: hidden;
+    padding: 2% 2%;
+}
+
+.gallery-content {
+    white-space: nowrap;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 25%;
+    height: 100%;
+    padding: 0 2px;
+    background: #0000003b;
+    box-shadow: 1px 1px 1px black;
+}
+
+.gallery-item-container img {
+    margin: 0 auto;
+    object-fit: contain;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-item-container {
+    display:flex;
+    width:100%;
+    height:100%;
+}
+
+.handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    width: 4%;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+}
+
+.handle.handle-next {
+    right:0;
+}
+.handle.handle-prev {
+    left:0;
+}
+
+.handle i {
+    align-self: center;
+}
+
+.animating {
+    -webkit-transition: -webkit-transform 0.75s ease 0s;
+    transition: -webkit-transform 0.75s ease 0s;
+    -o-transition: -o-transform 0.75s ease 0s;
+    -moz-transition: transform 0.75s ease 0s, -moz-transform 0.75s ease 0s;
+    transition: transform 0.75s ease 0s;
+    transition: transform 0.75s ease 0s, -webkit-transform 0.75s ease 0s, -moz-transform 0.75s ease 0s, -o-transform 0.75s ease 0s;
+    pointer-events: none;
+}
+
+
+
+
