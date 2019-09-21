@@ -70,7 +70,9 @@ const handleScrollEvent = (evt) =>{
         logo.classList.remove('hidden');
     }else{
         logo.classList.add('hidden');
-        audiopluginpos.appendChild(audioplugin);
+        if(audiopluginpos){
+          audiopluginpos.appendChild(audioplugin);
+        }
     }
 
 }
