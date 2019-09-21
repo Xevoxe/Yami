@@ -15,6 +15,8 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="plugins/gallery/gallery.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="theme-color" content="#fafafa">
@@ -74,7 +76,20 @@
         </div>
       </div>
       <main>
-        
+        <div class="gallery-row">
+          <div>
+            <h2 class="primary media-headings">Concept Art</h2>
+          </div>
+          <div id="concept-gallery" class="content-container"></div>
+        </div>
+        <div class="gallery-row">
+          <h2 class="primary media-headings">Pixel Art</h2>
+          <div id="pixel-gallery" class="content-container"></div>
+        </div>
+        <div class="gallery-row">  
+          <h2 class="primary media-headings">Videos</h2>
+          <div id="video-gallery" class="content-container"></div>
+        </div>  
       </main>
   <footer id="footer container-fluid">
     <div id="footer-wrapper">
@@ -128,7 +143,10 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
+  <script src="plugins/components.js"></script>
+  <script src='plugins/gallery/script.js'></script>
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 

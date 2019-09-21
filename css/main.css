@@ -420,6 +420,38 @@ textarea {
      
    }
 
+   .icon-rightCaret:before {
+    content: '\e867';
+}
+
+.handle:focus .indicator-icon {
+  font-weight: bold;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+  color: #fff;
+}
+
+.handle {
+  border: 1px solid rgba(196,25,137,1);
+  cursor: pointer;
+}
+
+.handle:hover {
+  background: rgb(64,177,221);
+  border: none;
+}
+
+.handle:hover i {
+  color:white;
+}
+
+.handle i {
+  color: rgb(64,177,221);
+}
+
   
 
    @media (min-width: 575px){
@@ -449,6 +481,7 @@ textarea {
      
     body p {
        font-size:16px;
+       -webkit-font-smoothing: subpixel-antialiased;
      }
     #hero {
       background-image: url("../img/herobg_bbvsuq/herobg_bbvsuq_c_scale\,w_960.jpg");

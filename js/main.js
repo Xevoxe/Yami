@@ -1,3 +1,5 @@
+
+
 function getPosition(el) {
     var xPos = 0;
     var yPos = 0;
@@ -25,6 +27,7 @@ function getPosition(el) {
   }
 
 document.addEventListener("DOMContentLoaded", function(){
+
 
 const stickyElement = (className,element,parrallax) =>{
     
@@ -83,7 +86,9 @@ if(stickyplayer){
 let navbar = document.getElementById("nav-wrapper");
 
 document.addEventListener("scroll", handleScrollEvent);
+
 });
+
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
