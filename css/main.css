@@ -249,6 +249,7 @@ textarea {
     footer {
       background-color: #170b29;
       height: 100vh;
+      padding-bottom: 5vh;
     }
 
     footer.list-group {
