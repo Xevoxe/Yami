@@ -1,0 +1,55 @@
+main {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    padding:0;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.social-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.facebook-icon img {
+    width: 200px;
+}
+
+.icon-container {
+    display:flex;
+}
+
+.twitter-icon img {
+    width: 50px;
+}
+
+.icon-container a {
+    width:90%;
+    align-self: center;
+    font-size:  1.4em;
+}
+
+.instagram-icon img {
+    margin-right:10px;
+    width: 35px;
+}
+
+.discord-icon img{
+    width:160px;
+}
+

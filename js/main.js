@@ -81,6 +81,7 @@ let stickyaudio;
 
 let stickynav = stickyElement("sticky-nav","nav-wrapper",0);
 let stickyfooter = stickyElement("sticky","footer-img",.50)
+
 if(stickyplayer){
   stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
 }
