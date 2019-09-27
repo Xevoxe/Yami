@@ -5,6 +5,10 @@ main {
     justify-content: center;
 }
 
+ul {
+    padding:0;
+}
+
 li {
     text-decoration: none;
     list-style-type: none;
@@ -15,10 +19,6 @@ a:hover {
     text-decoration: none;
 }
 
-h1 {
-    font-weight: 200;
-    text-align: center;
-}
 .social-wrapper {
     align-items: center;
     display: flex;
