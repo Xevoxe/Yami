@@ -346,10 +346,9 @@ textarea {
       overflow: hidden;
       
     }
-
     .summary-container p {
       line-height: 1.2;
-      font-size: 1.125rem;
+      font-size: 1rem;
     }
     .dev-log-summary::after{
       color:white;
@@ -499,6 +498,11 @@ textarea {
       background-image: url("../img/herobg_bbvsuq/herobg_bbvsuq_c_scale\,w_960.jpg");
       background-size:contain;
      }
+
+     .summary-container p {
+      line-height: 1.2;
+      font-size: 1.125rem;
+    }
 
      .icons {
        font-size:1.75em;
