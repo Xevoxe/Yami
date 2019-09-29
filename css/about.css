@@ -41,3 +41,28 @@ h2, h3{
 .department {
     margin: 5% 0;
 }
+
+.aboutus {
+    display:flex;
+    flex-direction: column;
+}
+
+.aboutus p {
+    width:80%;
+}
+
+.aboutus img {
+    width: 200px;
+    align-self: center;
+}
+
+@media(min-width: 768px){
+    .aboutus {
+        flex-direction: row;
+    }
+    .aboutus img {
+        width: 20%;
+        height: 100%;
+        align-self: center;
+    }
+}
