@@ -209,7 +209,7 @@ const gallery_plugin = (dest,media,numDisplay,customView,classNames)=>{
         if(!transform) {transform = 0};
         content.classList.toggle("animating");
         content.style.transform = `translate3d(${parseInt(transform) -100}%,0,0)`;
-        content.toggleAttribute('next');
+        content.setAttribute('next',"");
         nextBtn.removeEventListener('click',handleNext);
 
     }
@@ -220,7 +220,7 @@ const gallery_plugin = (dest,media,numDisplay,customView,classNames)=>{
         content.classList.toggle("animating");
         content.style.transform = `translate3d(${parseInt(transform)+100}%,0,0)`;
         prevBtn.removeEventListener('click',handlePrev);
-        content.toggleAttribute('prev');
+        content.setAttribute('prev',"");
     }
 
 
@@ -252,11 +252,11 @@ const gallery_plugin = (dest,media,numDisplay,customView,classNames)=>{
                 
                 if(content.hasAttribute('next')){
                     shiftNodes(1);
-                    content.toggleAttribute('next');
+                    content.removeAttribute('next');
                     nextBtn.addEventListener('click',handleNext);
                 }else if(content.hasAttribute('prev')){
                     shiftNodes(-1);
-                    content.toggleAttribute('prev');
+                    content.removeAttribute('prev');
                     prevBtn.addEventListener('click',handlePrev);
                 }  
                 renderNodes();
