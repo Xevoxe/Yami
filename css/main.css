@@ -100,7 +100,7 @@ textarea {
   body {
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 83%, #170b29 100%);
-    /* max-width: 960px; */
+    max-width: 960px;
     margin:auto;
     font-family: 'Roboto', sans-serif;
     font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600px - 300px)));
@@ -182,8 +182,8 @@ textarea {
      justify-content: space-between;
       background-color: #000 !important;
       width: 100%;
-      /* max-width: 960px; */
-      padding: 0 5%;
+      max-width: 960px;
+      /* padding: 0 5%; */
    }
 
    #navbarNav {
@@ -195,11 +195,11 @@ textarea {
     background-color: black;
     z-index: 999999;
     justify-content: space-between;
-    /* max-width: 960px; */
+    max-width: 960px;
    }
 
    #nav-wrapper .navbar{
-     /* max-width:960px; */
+     max-width:960px;
      padding: 2% 0px;
    }
 
@@ -340,8 +340,8 @@ textarea {
       width: 100%;
       background-color:black;
       align-items: center;
-      left: 0;
-      padding: 0 5%;
+      /* left: 0; */
+      /* padding: 0 5%; */
     }
 
     .summary-container {
