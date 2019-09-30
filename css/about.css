@@ -59,22 +59,26 @@ h2, h3{
     width: 200px;
     align-self: center;
 }
-
+/* 
 @media(min-width: 768px){
     .aboutus {
         flex-direction: row;
         margin:auto;
     }
-}
+} */
 
 @media(min-width: 1200px){
+    .aboutus {
+        flex-direction: row;
+        margin:auto;
+    }
     .aboutus img {
-        width: 15%;
+        width: 20%;
         height: 100%;
         align-self: center;
     }
     .aboutus p {
-        width:60%;
+        width:80%;
     }
     .credits {
         margin:auto;
