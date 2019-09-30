@@ -183,6 +183,7 @@ textarea {
       background-color: #000 !important;
       width: 100%;
       max-width: 960px;
+      /* padding: 0 5%; */
    }
 
    #navbarNav {
@@ -295,7 +296,7 @@ textarea {
     }
 
     .footerWrapper {
-      max-width: 768px;
+      /* max-width: 768px; */
     }
     .footerBox {
       display:flex;
@@ -304,7 +305,7 @@ textarea {
       align-items: center;
       height:100vh;
       padding-bottom: 30vh;
-      max-width: 768px;
+      /* max-width: 768px; */
 
     }
 
@@ -339,6 +340,8 @@ textarea {
       width: 100%;
       background-color:black;
       align-items: center;
+      /* left: 0; */
+      /* padding: 0 5%; */
     }
 
     .summary-container {
@@ -468,6 +471,24 @@ textarea {
   color: rgb(64,177,221);
 }
 
+.game-section {
+  display:flex;
+  flex-direction: column;
+}
+
+.dev-section {
+  display:flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  padding: 5%;
+  flex-direction: column;
+}
+
   
 
    @media (min-width: 575px){
@@ -487,10 +508,11 @@ textarea {
     }
 
       .footerBox:last-child {
-        width:100%;
+        width:80%;
         flex-direction: row;
         justify-content: space-evenly;
       }
+ 
     }
 
    @media (min-width: 768px){
@@ -512,6 +534,21 @@ textarea {
      .icons {
        font-size:1.75em;
      }
+     .dev-section {
+      width: 41.67%;
+      padding: 0;
+      padding-left: 2%;
+    }
+    .game-section {
+      width: 58.33%;
+    }
+    .section:nth-child(1){ order:1; }
+    .section:nth-child(2){ order:3; }
+    .section:nth-child(3){ order:2; }
+   }
+
+   .section-row {
+     display:flex;
    }
 
 

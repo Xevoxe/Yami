@@ -435,26 +435,26 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
 
 //This is used to autostart the audio when it is able to.
 let aplayer = audioplayer_plugin(document,"audio-plugin",data);
- (function (){
-    const userInputEventNames = [
-        'click', 'contextmenu', 'auxclick', 'dblclick', 'mousedown',
-        'mouseup', 'pointerup', 'touchend', 'keydown', 'keyup'
-    ];
+//  (function (){
+//     const userInputEventNames = [
+//         'click', 'contextmenu', 'auxclick', 'dblclick', 'mousedown',
+//         'mouseup', 'pointerup', 'touchend', 'keydown', 'keyup'
+//     ];
 
-    function addAudioPlayer(){
+//     function addAudioPlayer(){
 
-        aplayer.audioPlayer.start();
-        userInputEventNames.forEach(eventName => {
-            document.removeEventListener(eventName, addAudioPlayer);
-          });
+//         aplayer.audioPlayer.start();
+//         userInputEventNames.forEach(eventName => {
+//             document.removeEventListener(eventName, addAudioPlayer);
+//           });
 
-    }
+//     }
 
-    userInputEventNames.forEach(eventName => {
-        document.addEventListener(eventName, addAudioPlayer);
-      });
+//     userInputEventNames.forEach(eventName => {
+//         document.addEventListener(eventName, addAudioPlayer);
+//       });
 
- })();
+//  })();
 
 
 
