@@ -1,0 +1,136 @@
+
+#spinner {
+    text-align: center;
+    margin-top: 1vh;
+}
+
+.dev-logs-container h2 {
+    color:rgba(196,25,137,1);
+    font-weight: 200;
+}
+
+.dev-logs-container h3 {
+    color:rgba(196,25,137,1);
+    font-size: 1.3125rem;
+}
+.dev-logs-container ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 2% 2%;
+}
+
+.dev-logs-container li {
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba(196,25,137,1),0 0 0 1px rgba(82, 195, 240, 0.548);
+    transition: transform .2s ease-in-out,top .2s ease-in-out;
+}
+
+
+.dev-logs-container li:hover {
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+
+.dev-log-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    padding: 5% 2%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+.dev-log-item img {
+    object-fit: contain;
+}
+
+
+.blog-details {
+    font-size: .75rem;
+}
+
+.blog-details p {
+    padding: 2%;
+}
+
+.blog-details span:first-child {
+    color:rgba(196,25,137,1);
+}
+
+.blog-details span:nth-of-type(2){
+    color:rgba(219, 245, 255, 0.75);
+}
+
+.log-modal-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.527);
+    justify-content: center;
+    position: fixed;
+    left:0;
+    top:0;
+    padding: 2% 0;
+    z-index: 999999;
+}
+
+.log-modal-container button {
+    display: flex;
+    align-self: flex-end;
+    width: 50px;
+    margin-right: 15%;
+    font-size: 1.5rem;
+    background: black;
+    border-color: rgba(196,25,137,1);
+    color: rgb(64,177,221);
+}
+
+.modal-inner {
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 5% 5%;
+    overflow-x: hidden;
+    align-self:center;
+}
+
+.modal-inner img {
+    width:100%;
+}
+
+.modal-close-btn {
+    display: flex;
+    align-self: flex-end;
+    margin: 0 15% 1% 0%;
+    color: rgba(196,25,137,1);
+    border: 1px solid rgba(196,25,137,1);
+    font-size: 2rem;
+}
+
+.modal-close-btn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    .dev-log-item {
+        flex-direction: row;
+        padding: 1% 1% 0% 1%;
+    }
+
+    .dev-log-item p {
+        font-size: 1rem;
+    }
+
+    .dev-log-item img {
+        width: 125px;
+        margin-right: 25px;
+    }
+    p.blog-details {
+        font-size: .75rem;
+    }
+}

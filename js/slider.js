@@ -47,19 +47,19 @@ let carousel_plugin = (document,srcElmt,data) =>{
                     return elmt;
                 });
     
-                let prev = document.createElement('DIV');
-                prev.className='slider-btn-prev';
-                prev.addEventListener('click', this.prev);
+                // let prev = document.createElement('DIV');
+                // prev.className='slider-btn-prev';
+                // prev.addEventListener('click', this.prev);
     
-                let next = document.createElement('DIV');
-                next.className ='slider-btn-next';
-                next.addEventListener('click', this.next);
+                // let next = document.createElement('DIV');
+                // next.className ='slider-btn-next';
+                // next.addEventListener('click', this.next);
 
             this.slides.forEach((slide)=>{
                 wrapper.appendChild(slide);
             })
-            wrapper.appendChild(prev);
-            wrapper.appendChild(next);
+            // wrapper.appendChild(prev);
+            // wrapper.appendChild(next);
 
             this.captionView = createView(); 
 

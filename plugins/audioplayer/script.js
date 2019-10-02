@@ -1,18 +1,18 @@
 `use strict`;
 
 const data = [{
-    title: "Yami New Forest Theme",
-    composer: "Sassy Keys",
-    company: "Tumultuous Productions",
-    type: "mp3",
-    src: "audio/Yami_New_Forest_Theme_Update.mp3"
-},
-{
     title: "Brother Sickness",
     composer: "Sassy Keys",
     company: "Tumultuous Productions",
     type: "mp3",
     src: "audio/Brotherly_Sickness_lilmix.mp3"
+},
+{
+    title: "Yami New Forest Theme",
+    composer: "Sassy Keys",
+    company: "Tumultuous Productions",
+    type: "mp3",
+    src: "audio/Yami_New_Forest_Theme_Update.mp3"
 }]
 
 
