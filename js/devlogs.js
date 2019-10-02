@@ -23,7 +23,7 @@ const renderLogItemView = ({author,date,title,thumb,link,summary},key)=>{
     row.className="dev-log-item";
 
     let imgThumb = document.createElement('IMG');
-    imgThumb.src = `img/tlogosm.PNG`;
+    imgThumb.src = `img/thumbs/${thumb}`;
     imgThumb.alt = `Dev-Log: ${title}`;
 
     let titleElmt = document.createElement('H3');
