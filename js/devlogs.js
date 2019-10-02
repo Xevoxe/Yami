@@ -26,6 +26,11 @@ const renderLogItemView = ({author,date,title,thumb,link,summary},key)=>{
     imgThumb.src = `img/thumbs/${thumb}`;
     imgThumb.alt = `Dev-Log: ${title}`;
 
+    let imgCol = document.createElement('Div');
+    imgCol.className = "log-item-img";
+
+    imgCol.appendChild(imgThumb);
+
     let titleElmt = document.createElement('H3');
     titleElmt.textContent= title;
 
@@ -48,7 +53,7 @@ const renderLogItemView = ({author,date,title,thumb,link,summary},key)=>{
     detailsCol.appendChild(summaryElmt);
     detailsCol.appendChild(captionElmt);
 
-    row.appendChild(imgThumb);
+    row.appendChild(imgCol);
     row.appendChild(detailsCol);
 
     //Add event listeners
@@ -85,7 +90,11 @@ const renderLogModal = (devlog)=>{
     closeBtn.className = "modal-close-btn material-icons";
     closeBtn.textContent = "close";
 
-    modal.appendChild(closeBtn);
+    let btncontainer = document.createElement('Div');
+    btncontainer.className ="btn-container";
+
+    btncontainer.appendChild(closeBtn);
+    modal.appendChild(btncontainer);
     modal.appendChild(inner);
 
     fragment.appendChild(modal);
