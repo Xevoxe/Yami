@@ -137,7 +137,7 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
         const AudioComponent = function(){
 
             let _audio = document.createElement('AUDIO');
-            _audio.autoplay = true;
+            // _audio.autoplay = true;
             _audio.preload = "metadata";
 
             const _play = ()=>{
