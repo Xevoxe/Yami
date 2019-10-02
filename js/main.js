@@ -43,7 +43,11 @@ const stickyElement = (className,element,parrallax) =>{
             elmt.classList.remove(className);
         }
     }
-}
+
+
+
+
+  }
 
 
 let logo = document.getElementById("logo");

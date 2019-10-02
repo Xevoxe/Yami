@@ -184,6 +184,8 @@ textarea {
       width: 100%;
       max-width: 960px;
       /* padding: 0 5%; */
+      /* -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0,0,0); */
    }
 
    #navbarNav {
