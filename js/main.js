@@ -88,9 +88,6 @@ const stickyElement = (className,element,parrallax) =>{
     }
   }
 
-let navigation = document.getElementById('navigation');
-
-
 const scrollParallax = function (element){
     let transformOffset = 0;
     let posY = element.getBoundingClientRect().y;
