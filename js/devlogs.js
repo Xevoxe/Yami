@@ -166,7 +166,6 @@ async function renderMore (entry,observer){
 }
 
 (async ()=>{
-    //keeps track of pagination
     try{
         let data = await getData(`https://yamicms-d339a.firebaseio.com/devlogs.json?orderBy="$key"&limitToLast=3`);
         data = data.reverse();
