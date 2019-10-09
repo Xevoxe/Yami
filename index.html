@@ -7,8 +7,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
@@ -16,220 +14,200 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/devlogs.css">
   <link rel="stylesheet" href="plugins/audioplayer/audioplayer.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
   <script src="https://kit.fontawesome.com/82068eb64a.js"></script>
 </head>
 
 <body>
-    <div id="nav-bar">
-        <div class="flexwrapper">
-            <picture>
-                <img
-                sizes="(max-width: 1000px) 40vw, 400px"
-                srcset="
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_200.png 200w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png 366w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_477.png 477w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png 756w"
-                src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
-                alt="">
-                </picture>
+    <div id="navigation">
+      <div class="nav-wrapper">
+          <button id="mobile-nav-btn">
+              <span class="mobile-nav-icon secondary"></span>
+          </button>
+        <div class="nav-bar-content">
+          <div id="cta-wrapper">
+            <div class="cta-btn">
+              <a href="https://discord.gg/BRV9jbG"><img src="img/discordcta.png"></a>
+            </div>
+            <div class="cta-btn">
+                <a href="https://discord.gg/BRV9jbG"><img src="img/patreoncta.png"></a>
+            </div>
+          </div>
+          <div id="logo-wrapper" class="hidden">
+              <img src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png" alt="Yami Logo">
+          </div>
         </div>
-        <div id="nav-wrapper">
-            <picture id="logo" class="logo hidden">
-                <img
-                sizes="(max-width: 1000px) 40vw, 400px"
-                srcset="
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_200.png 200w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png 366w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_477.png 477w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png 756w"
-                src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
-                alt="">
-                </picture>
-                <div id="sticky-player-pos"></div>
-          <nav class="navbar navbar-expand-lg">
-              <button id="mobile-nav" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse mt-1" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="devlogs.html">Dev-Logs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="media.html">Media</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-              </div>
-            </nav>
-        </div>
-      </div>
-  <header class="header">
-    <div id="hero" class="Jumbotron Jumbotron-fluid">
-      <div id="hero-slider">
         
       </div>
-      <div id="audio-plugin-pos">
-        <div id="audio-plugin"></div>
+        <nav id="nav-bar">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="devlogs.html">Dev-Logs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  <header class="header text-color">
+    <div>
+      <img src="img/Yami.png" alt="Yami">
+      <h1>A multiplayer Metroidvania puzzle adventure game.</h1>
+    </div>
+    <div>
+      <h2>Now on Discord and Patreon</h2>
+      <div class="header-info">
+        <div>
+          <a href="https://discord.gg/BRV9jbG"><img src="img/discordlogo.png" alt="Discord"></a>
+        </div>
+        <div>
+          <a href="https://discord.gg/BRV9jbG"><img src="img/patreonlogo.jpg" alt="Patreon"></a>
+        </div>
       </div>
     </div>
   </header>
   <main class="main-container">
-      <section class="game-section section">
-        <hr>
-        <h1 class="primary">Yami: The Game</h1>
-        <div class="content-container">
-          <p class="text-color">
-              Yami is a pixel art 2D co-op metroidvania adventure game, which focuses on player discovery, through the usage of platforming and solving of puzzles, as well as uncovering lore of this world. Players will be able to control two brothers, Yuyo and Yuki. Both of whom possess the powers of Yami, but whereas the elder brother Yuki obtained a pure version, his younger brother Yuyo’s magic is corrupted.           
-          </p>
-            <img class="content-img" src="img/brothers.png"/>
-          <p class="text-color">
-              In order to save Yuyo from the corrupted magic within, Yuki joins his brother in a quest beyond the safe borders of their city, seeking a desperate hope to find a cure somewhere within the Empire of old. Should they fail, Yuyo’s life will be overtaken and fade into the corrupted Yami. The world they traverse is teeming with dangerous creatures and traps alike, but through their bond as brothers they will explore the Empire, discovering clues and gathering precious information to find a path forward and a cure for Yuyo. 
-          </p>          
-        </div>
-      </section>
-      <section class="section">
-        <h1 class="primary">Yami: The World</h1>
-        <div class="content-container">
-          <p class="text-color">
-              The tale of Yami takes place within the world of Raum, and centers around the once mighty Yami Empire, whose namesake was the powerful magic they used to develop their expansive dominion. Through mastery and manipulation of the pure Yami magic, the Empire soon rose to control over all lands, with none standing in the way of their advanced technology and military might. However, those within the Empire unable to properly wield Yami attempted to take it for themselves, corrupting the pool of magic in the process. Now there are only memories and scattered fragments of what once was, the final keepers of pure Yami now a withered people. 
-          <!-- <img class="content-img" src="img/enemies.png"> -->
-          <!-- <p class="text-color">
-              But as with all powers, evil seeped its way in. The pure Yami magic they used as a driving force for their Empire began to decay
-               and rot. Soon the tendrils of corruption found their way into the highest leaders of the Empire, slowly ensnaring them in its
-                tempting evil.  Assurances of glory. Easily obtainable power. Such empty promises can trap even the noblest mind.
-                 The corruption spread throughout the Empire, and Yami’s purity was nearly destroyed.
-          </p> -->
-          <!-- <img class="divider-img" src="img/powerups.png">
-          <p class="text-color">
-              Those few able to flee from the corrupted land sought refuge in the unclaimed lands beyond the Imperial reach, creating a last bastion of hope.
-               Forsaking all memories of their glorious past in place of humility and maintaining a purity amongst the magic-users, the elders passed
-                on the tales of the evils unleashed amongst the Empire of old.
-          </p> -->
-            <!-- <img class="content-img" src="img/crystals.png"> -->
-          <!-- <p class="text-color">
-                Of these people, two brothers, Yuki the elder and Yuyo the younger, were born. 
-              And once again, the whispers of glory and power tainted anew…
-              Yuyo was too young, unworthy for the mantle of Yami magic, but took it for himself. And in doing so sealed the fate of the Final City. Within him now lay corruption, the only hope for him a vague and ancient tale of a cure deep within the Inner Empire. But he will not share this burden alone, as his elder brother Yuki has vowed to see his brother saved. No matter what dangers lurk in the foul lands beyond.
-              Lead these brothers to their salvation, and aid them in their quest.-->
-          </p> 
-        </div>
-      </section>
-      <aside id="dev-logs" class="dev-section section">
-          <hr>
-          <h2 class="secondary">Dev Logs</h2>
-            <div class="row dev-log-item">
-              <div class="col-4 dev-log text-color">
-               <div class="dev-log-img">
-                 <img src="img/thumbs/tlogosm.png">
-               </div>
-                  <span>August 1st, 2019</span>
-              </div>
-              <div class="col">
-                <div class="summary-container">
-                  <h3 class="text-color">Dev Log #1</h3>
-                  <p class="dev-log-summary text-color">
-                    Tumultuous Productions is a game development team whose members come from around the world and possess both passion and diligence for their craft. Originally established in the winter of 2018, this game company now boasts an array of skilled graphic and pixel artists, animators, coders, writers, musicians and sound designers
-                  </p>
-                </div>
-                <a href="https://docs.google.com/document/d/1sQCltM7uqArH0046fty5-2LxBioKHEFbWkZqfEI-KAI/edit"  class="button nav-item">Read More</a>
-              </div>
-            </div>
-          <hr class="background-secondary dev-log-divider">
-          <div class="row dev-log-item">
-              <div class="col-4 dev-log text-color">
-               <div class="dev-log-img">
-                 <img src="img/thumbs/tlogosm.png">
-               </div>
-                  <span>August 9th, 2019</span>
-              </div>
-              <div class="col">
-                <div class="summary-container">
-                  <h3 class="text-color">Dev Log #2</h3>
-                  <p class="dev-log-summary text-color">
-                      Weekly Updates Week 2:Concepts of Creatures within Kinfallen Forest:
-                      Here is a showcase of two enemies you will encounter in the Kinfallen Forest, including a brief description and concept art created by our talented artists: 
-                      Shrubble:                     
-                  </p>
-                </div>
-                <a href="https://docs.google.com/document/d/1sQCltM7uqArH0046fty5-2LxBioKHEFbWkZqfEI-KAI/edit"  class="button nav-item">Read More</a>
-              </div>
-            </div>
-        </aside> 
-  </main>
+      <section class="overview">
 
-  <footer id="footer container-fluid">
-    <div id="footer-wrapper">
-      <div id="footer-img">
-        <picture id="footer-picture">
-            <source
-              media="(max-width: 496px)"
-              sizes="(max-width: 496) 100vw, 496px"
-              srcset="
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_406.jpg 406w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_496.jpg 496w,"
-              >
-              <img 
-                sizes="(max-width: 1400) 100vw, 960px"
-                srcset="
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_480.jpg 480w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_602.jpg 602w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_709.jpg 709w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_810.jpg 810w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_910.jpg 910w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_990.jpg 990w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg 1008w,
-                "
-                src="img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg"
-                alt="Footer Image"
-              >
-          </picture>
-      </div>
-        <div class="footerBox secondary">
-              <ul class="list-group icons">
-                  <li>
-                    <a href="https://www.facebook.com/TumultuousProductions"><i class="fab fa-facebook secondary"></i></a>
+      </section>
+      <section id="kinefallen-story" class="parallax-section">
+        <div id="parallax-item" class="parallax-container">
+          <div class="parallax-inner parallax-bg"></div>
+        </div>
+        <div class="section-overlay-wrapper">
+          <div class="section-overlay"></div>
+          <div class="container text-color">
+            <div class="content">
+              <h3>The Kinfallen</h3>
+              <p>
+                It has been a millennia since the magical source of power known as Yami was first harnessed by the Chosen.  
+                With nothing else to rival their powerful Yami magic, the known world was forever changed as 
+                the Chosen united the continent under one empire, The Great Yami Empire.   However, Yami is a living life force and would not accept just anyone.   
+              </p>
+              <p>
+                Overtime a divergence
+                between the Chosen and the people occurred resulting in the people forcefully taking the Yami power into themselves.  By doing so these individuals will pay a terrible price 
+                as a corruption forms turning them insane and destructive.  Now strict laws govern the use of Yami as the dark times of the Forlorn Realm remain a subtle reminder of how close the people came to destruction.
+              </p>
+            </div>
+            <div id="audio-plugin" class="audio-player"></div>  
+            <div class="parallax-fg">
+               <img src="img/parallaxfg.png">
+            </div>
+          </div>
+        </div>  
+      </section>
+      <section class="studio-section text-color">
+        <div>
+          <p>Our team is made up of skilled artists, programmers, writers, and musicians that span the globe.
+              Each person bringing an array of talents and skills to create fun and immersive worlds.
+          </p>
+          <p>Videogames and design is our passion and we want to share it with you.</p>
+          <div class="section-btn text-color"><a href="about.html" role="button">more info</a></div>
+        </div>
+        <div>
+          <div class="studio-img studio-logo">
+              <img class="section-img" src="img/tlogofulltrans.PNG" alt="Tumultuous Productions">
+          </div>
+        </div>
+        <div class="divider-svg"></div>  
+      </section>
+      <section class="section-join text-color">
+        <div>
+          <h2>Join in the fun with us!</h2>
+          <p>Want to stay up to date on development and news?  Then follow us on Facebook and Twitter.
+              Are you interested in how we do things? Or do you just have a passion for gaming and want to chat with a dev?
+                Then jump on over to our discord channel.  We are wanting to hear from you.</p>
+              <ul class="social-wrapper">
+                  <li class="facebook-icon">
+                        <a href="https://www.facebook.com/TumultuousProductions"><img src="img/icons/flogohighlight.png"></a>
                   </li>
-                  <li>
-                      <a href="https://twitter.com/TumultuousGame"><i class="fab fa-twitter secondary"></i></a>
+                  <li class="twitter-icon">
+                      <a href="https://twitter.com/TumultuousGame"><img src="img/icons/twitterlogohighlight.png"></a>
                   </li>
-              </ul>
-              <ul class="list-group">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Dev-Logs</li>
-                <li>Media</li>
-                <li>Contact Us</li>
+                  <li class="instagram-icon">
+                      <a href="https://www.instagram.com/yamithegame/"><img src="img/icons/instagram.png"></a>
+                  </li>
+                  <li class="discord-icon">
+                    <a href="#"><img src="img/icons/discordicon.png"></a>
+                  </li>
+                  <li class="jolt-icon">
+                      <a href="https://gamejolt.com/games/yami/420260"><img src="img/icons/jolticon.png"></a>
+                  </li>
               </ul>
           </div>
-          </div> 
+          <div>
+            <img class="section-img section-join-img" src="img/findusimage.png" alt="Find Us">
+          </div>
+        <div class="divider-svg-2"></div>
+      </section>
+      <section class="section news-section text-color">
+        <h2>Development News!</h2>
+        <div class="section-news">
+            <h3>Devlog 6- Playing Games and Playing Music</h3>
+            <p class="blog-details"><span>By Tumultuous Productions </span><span>on Thursday, September 5, 2019</span></p>
+            <p>In our first DevLog, we spoke briefly of Yuki and Yuyo and their journey they would face within the game Yami. Our concept artists and pixel artists have been hard at work to fine-tune the design and movements of our characters, in order to obtain the best experience for players and streamline gameplay.</p>
+        </div>
+        <div class="section-news">
+            <h3>Devlog #5- The Non-playables</h3>
+            <p class="blog-details"><span>By Tumultuous Productions</span><span>on Thursday, September 5, 2019</span></p>
+            <p>As Yuyo and Yuki’s ancestors fled the fallen Empire, evil was always one step behind. When they finally arrived at what is now Kinfallen Forest, there they found themselves surrounded by dangerous creatures and former citizens of the Empire now tainted and corrupted.</p>
+        </div>
+      </section>
+  </main>
+
+  <footer>
+      <img 
+        sizes="(max-width: 2520px) 100vw, 2520px"
+        srcset="
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_300.png 300w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_730.png 730w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1039.png 1039w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1289.png 1289w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1537.png 1537w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1750.png 1750w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1954.png 1954w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2156.png 2156w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2341.png 2341w,
+        img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2520.png 2520w"
+        src="img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2520.png"
+        alt="">
+    <div class="footer-info">
+      <img src="img/tlogofooter.png" alt="Tumultuous Productions">
+      <div class="social-media">
+        <div id="facebook">
+          <a href="https://www.facebook.com/TumultuousProductions" alt="Find us on Facebook"><span class="btn"></span></a>
+        </div>
+        <div id="twitter">
+            <a href="https://twitter.com/TumultuousGame" alt="Follow us on Twitter"><span class="btn"></span></a>
+        </div>
+      </div>
+      <div class="copy-right text-color">
+          <span>Tumultuous Productions</span>
+          <span>&copy; Copyright 2019</span>
+        </div>
+    </div>
+    <div class="footer-stone"></div>
   </footer>
 
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/slider.js"></script>
+  <!-- <script src="js/plugins.js"></script> -->
+  
+  <!-- <script src="js/slider.js"></script> -->
   <script src ='plugins/audioplayer/script.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>

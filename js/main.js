@@ -1,4 +1,40 @@
 
+let nav = document.getElementById('navigation');
+let logo = document.getElementById('logo-wrapper');
+const handleScroll = ()=>{
+
+  if(document.documentElement.scrollTop === 0){
+    nav.classList.remove('sticky-nav');
+    logo.classList.add('hidden');
+    logo.classList.remove('show');
+  }else
+  {
+    nav.classList.add('sticky-nav');
+    logo.classList.add('show');
+    logo.classList.remove('hidden');
+    
+  }
+}
+
+let navBar = document.getElementById('nav-bar');
+
+const toggleMobileNav = (navBar) =>{
+  return function toggle (e){
+    if(navBar.classList.contains('active')){
+      navBar.classList.remove('active');
+    }else{
+      navBar.classList.add('active');
+    }
+  }
+}
+
+let handleToggle = toggleMobileNav(navBar);
+document.addEventListener('scroll', handleScroll);
+
+
+
+
+
 
 function getPosition(el) {
     var xPos = 0;
@@ -26,8 +62,15 @@ function getPosition(el) {
     };
   }
 
+  //Refactor later
 document.addEventListener("DOMContentLoaded", function(){
-
+ 
+  let mobileNav = document.getElementById('mobile-nav-btn');
+  let styles = window.getComputedStyle(mobileNav);
+if(!(styles.getPropertyValue('display') === 'none')){
+  //Add click listener
+  mobileNav.addEventListener('click',handleToggle);
+}
 
 const stickyElement = (className,element,parrallax) =>{
     
@@ -43,60 +86,59 @@ const stickyElement = (className,element,parrallax) =>{
             elmt.classList.remove(className);
         }
     }
-
-
-
-
   }
 
+let navigation = document.getElementById('navigation');
 
-let logo = document.getElementById("logo");
-let navwrapper = document.getElementById("nav-wrapper");
-let stickyplayer = document.getElementById('sticky-player-pos');
-let audiopluginpos = document.getElementById('audio-plugin-pos');
-let audioplugin = document.getElementById('audio-plugin');
 
-const handleScrollEvent = (evt) =>{
+const scrollParallax = function (element){
+    let transformOffset = 0;
+    let posY = element.getBoundingClientRect().y;
+    function parallax (e){
+      let newPosY = element.getBoundingClientRect().y;
+      transformOffset = (posY - newPosY ) * .50;
+      element.style.transform = `translate3d(0px, ${transformOffset}px, 0px)`;
+  }
 
-    stickynav();
-    stickyfooter();
-
-    if(stickyaudio){
-      stickyaudio();
-
-      if(audioplugin.classList.contains("sticky-audio")){
-        stickyplayer.appendChild(audioplugin);
-    }else {
-        audiopluginpos.appendChild(audioplugin);
-    }
-    }
-    if(navbar.classList.contains("sticky-nav")){
-        logo.classList.remove('hidden');
-    }else{
-        logo.classList.add('hidden');
-        if(audiopluginpos){
-          audiopluginpos.appendChild(audioplugin);
-        }
-    }
-
-}
-// const stickyFooter = stickyElement(,"footer-img");
-let stickyaudio;
-
-let stickynav = stickyElement("sticky-nav","nav-wrapper",0);
-let stickyfooter = stickyElement("sticky","footer-img",.50)
-
-if(stickyplayer){
-  stickyaudio = stickyElement("sticky-audio", "audio-plugin",0)
+  return parallax;
 }
 
-let navbar = document.getElementById("nav-wrapper");
 
-document.addEventListener("scroll", handleScrollEvent);
+
+const handleParallax = (entries)=>{
+  let target = entries[0];
+  //add scroll event listener to document
+  if(target.isIntersecting){
+    document.addEventListener('scroll',handleParallaxEvt);
+  }
+  else{
+    document.removeEventListener('scroll',handleParallaxEvt);
+  }
+
+};
+
+
+//Parallax observer
+let options = {
+rootMargin: "0px",
+threshhold: [0,1]
+};
+let target = document.getElementById('parallax-item');
+let handleParallaxEvt = new scrollParallax(target);
+let parallaxObserver = new IntersectionObserver(handleParallax, options);
+
+parallaxObserver.observe(target);
+
+let aplayer = audioplayer_plugin(document,"audio-plugin",data);
 
 });
 
 
+
+
+
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-  }
+  };
+
+
