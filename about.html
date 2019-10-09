@@ -25,57 +25,39 @@
 </head>
 
 <body>
-    <div id="nav-bar">
-        <div class="flexwrapper">
-            <picture>
-                <img
-                sizes="(max-width: 1000px) 40vw, 400px"
-                srcset="
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_200.png 200w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png 366w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_477.png 477w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png 756w"
-                src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
-                alt="">
-                </picture>
-        </div>
-        <div id="nav-wrapper">
-            <picture id="logo" class="logo hidden">
-                <img
-                sizes="(max-width: 1000px) 40vw, 400px"
-                srcset="
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_200.png 200w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png 366w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_477.png 477w,
-                img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png 756w"
-                src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_756.png"
-                alt="">
-                </picture>
-          <nav class="navbar navbar-expand-lg">
-              <button id="mobile-nav" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon secondary"></span>
-              </button>
-              <div class="collapse navbar-collapse mt-1" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="devlogs.html">Dev-Logs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="media.html">Media</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
+    <div id="navigation">
+        <div class="nav-wrapper">
+            <button id="mobile-nav-btn">
+                <span class="mobile-nav-icon secondary"></span>
+            </button>
+          <div class="nav-bar-content">
+            <div id="cta-wrapper">
+              <div class="cta-btn">
+                <a href="https://discord.gg/BRV9jbG"><img src="img/discordcta.png"></a>
               </div>
-            </nav>
+              <div class="cta-btn">
+                  <a href="https://discord.gg/BRV9jbG"><img src="img/patreoncta.png"></a>
+              </div>
+            </div>
+            <div id="logo-wrapper" class="hidden">
+                <img src="img/Yami_uh0ynv/Yami_uh0ynv_c_scale,w_366.png" alt="Yami Logo">
+            </div>
+          </div>
+          
         </div>
+          <nav id="nav-bar">
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="devlogs.html">Dev-Logs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </nav>
       </div>
       <header>
         <h1 class="secondary">About Us:</h1>
@@ -174,52 +156,39 @@
       </main>
 
     
-  <footer id="footer container-fluid">
-    <div id="footer-wrapper">
-      <div id="footer-img">
-        <picture id="footer-picture">
-            <source
-              media="(max-width: 496px)"
-              sizes="(max-width: 496) 100vw, 496px"
-              srcset="
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_406.jpg 406w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_ar_1_1,c_fill,g_auto__c_scale,w_496.jpg 496w,"
-              >
-              <img 
-                sizes="(max-width: 1400) 100vw, 960px"
-                srcset="
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_480.jpg 480w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_602.jpg 602w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_709.jpg 709w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_810.jpg 810w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_910.jpg 910w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_990.jpg 990w,
-                img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg 1008w,
-                "
-                src="img/footerfullsize_qzqm8t/footerfullsize_qzqm8t_c_scale,w_1008.jpg"
-                alt="Footer Image"
-              >
-          </picture>
-      </div>
-        <div class="footerBox secondary">
-              <ul class="list-group icons">
-                  <li>
-                    <a href="https://www.facebook.com/TumultuousProductions"><i class="fab fa-facebook secondary"></i></a>
-                  </li>
-                  <li>
-                      <a href="https://twitter.com/TumultuousGame"><i class="fab fa-twitter secondary"></i></a>
-                  </li>
-              </ul>
-              <ul class="list-group">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Dev-Logs</li>
-                <li>Media</li>
-                <li>Contact Us</li>
-              </ul>
+      <footer>
+          <img 
+            sizes="(max-width: 2520px) 100vw, 2520px"
+            srcset="
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_300.png 300w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_730.png 730w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1039.png 1039w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1289.png 1289w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1537.png 1537w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1750.png 1750w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_1954.png 1954w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2156.png 2156w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2341.png 2341w,
+            img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2520.png 2520w"
+            src="img/footerlogofinal_d6yzfu/footerlogofinal_d6yzfu_c_scale,w_2520.png"
+            alt="">
+        <div class="footer-info">
+          <img src="img/tlogofooter.png" alt="Tumultuous Productions">
+          <div class="social-media">
+            <div id="facebook">
+              <a href="https://www.facebook.com/TumultuousProductions" alt="Find us on Facebook"><span class="btn"></span></a>
+            </div>
+            <div id="twitter">
+                <a href="https://twitter.com/TumultuousGame" alt="Follow us on Twitter"><span class="btn"></span></a>
+            </div>
           </div>
-          </div> 
-  </footer>
+          <div class="copy-right text-color">
+              <span>Tumultuous Productions</span>
+              <span>&copy; Copyright 2019</span>
+            </div>
+        </div>
+        <div class="footer-stone"></div>
+      </footer>
 
 
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
