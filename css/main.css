@@ -146,7 +146,7 @@ textarea {
     font-size: 1.125em;
     color: #5d7d8a;
   }
-  
+
   header img {
     width:100%;
     height:auto;
@@ -761,6 +761,7 @@ textarea {
     }
     .studio-section > div:nth-child(1) {
         width: 75%;
+        padding-bottom: 100px;
       }
 
     .parallax-section {
