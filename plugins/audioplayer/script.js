@@ -311,19 +311,19 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
             const _start = ()=>{
                  //start the player
              _handleSrcChange(_srcList[_srcIndex]);
-             let start = _audio.play();
+            //  let start = _audio.play();
 
-            if (start !== undefined) {
-                start.then(_ => {
-                  // Autoplay started!
-                  _isActive = true;
-                  _render();
-                }).catch(error => {
-                  // Autoplay was prevented.
-                  _isActive = false;
-                  _render();
-                });
-              }
+            // if (start !== undefined) {
+            //     start.then(_ => {
+            //       // Autoplay started!
+            //       _isActive = true;
+            //       _render();
+            //     }).catch(error => {
+            //       // Autoplay was prevented.
+            //       _isActive = false;
+            //       _render();
+            //     });
+            //   }
             }
               const component = function (){
                     this.getElement = ()=>{
@@ -434,7 +434,6 @@ const audioplayer_plugin = (document, srcElmt,data) =>{
 } 
 
 //This is used to autostart the audio when it is able to.
-let aplayer = audioplayer_plugin(document,"audio-plugin",data);
 //  (function (){
 //     const userInputEventNames = [
 //         'click', 'contextmenu', 'auxclick', 'dblclick', 'mousedown',
