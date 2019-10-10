@@ -186,7 +186,7 @@ textarea {
 
   span {
     display:block;
-    font-size: 1.375em;
+
   }
 
   h3 {
@@ -610,6 +610,10 @@ textarea {
 
 .section-news > p:nth-child(2){
   margin-top:20px;
+}
+
+p.blog-details span{
+  font-size: .75em;
 }
 
 .section-news .blog-details > span:nth-child(1) {

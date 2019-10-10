@@ -100,7 +100,6 @@ const renderLogModal = (devlog)=>{
     fragment.appendChild(modal);
     dest.appendChild(fragment);
     dest.addEventListener('click',handleModalClose);
-
 }
 
 const renderLogContainer = (data)=>{
