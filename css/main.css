@@ -598,6 +598,10 @@ textarea {
   padding: 30px 50px;
 }
 
+.section-news:hover {
+  cursor:pointer;
+}
+
 
 .section-news h3 {
   color: rgb(64,177,221);
