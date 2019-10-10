@@ -3,7 +3,7 @@ const logView = ({author,date,title,summary})=>{
 return (
         `
                 <h3>${title}</h3>
-                <p class="blog-details"><span>${author} </span><span>on ${date.toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</span></p>
+                <p class="blog-details"><span class="primary">${author} </span><span>on ${date.toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</span></p>
                 <p>${summary}</p>
         `
 )};
