@@ -1,42 +1,68 @@
-
-
-const logView = ({author,date,title,thumb,link,summary})=>{
-    let section = document.createElement('div');
-    let titleElmt = document.createElement('h3');
-    let detailsElmt = document.createElement('p');
-    let authorElmt = document.createElement('span');
-    let dateElmt = document.createElement('span');
-    let summaryElmt = document.createElement('p');
-
-    section.className = 'section-news';
-    detailsElmt.className = 'blog-details';
-
-    titleElmt.textContent = title;
-    section.appendChild(titleElmt)
-
-    authorElmt.textContent = author;
+const logView = ({author,date,title,summary})=>{
     date = new Date(Date.parse(date));
-    dateElmt.textContent = `on ${date.toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}`;
-    detailsElmt.appendChild(authorElmt);
-    detailsElmt.appendChild(dateElmt);
+return (
+        `
+                <h3>${title}</h3>
+                <p class="blog-details"><span>${author} </span><span>on ${date.toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}</span></p>
+                <p>${summary}</p>
+        `
+)};
 
-    summaryElmt.textContent = summary;
-
-    section.appendChild(detailsElmt);
-    section.appendChild(summaryElmt);
-  
-    return section;
+const handleClickLog = (devlog)=>{
+    document.body.appendChild(renderLogModal(devlog));
 }
+
+const handleModalClose = ()=>{
+    console.log("Close");
+    let modal = document.getElementById('modal-container');
+    modal.remove();
+}
+
+const renderLogModal = (devlog)=>{
+    let fragment = document.createDocumentFragment();
+    
+    let modal = document.createElement('Div');
+    modal.id ="modal-container";
+    modal.className ="log-modal-container";
+    
+    let inner = document.createElement('Div');
+    inner.className="modal-inner";
+    inner.innerHTML = devlog;
+
+    // let closeBtn = document.createElement('I');
+    // closeBtn.className = "modal-close-btn material-icons";
+    // closeBtn.textContent = "close";
+
+    // let btncontainer = document.createElement('Div');
+    // btncontainer.className ="btn-container";
+
+    // btncontainer.appendChild(closeBtn);
+    // modal.appendChild(btncontainer);
+    modal.appendChild(inner);
+    modal.addEventListener('click',handleModalClose);
+
+    fragment.appendChild(modal);
+    return fragment;
+}
+
+
+
+
 
 const renderLogs = (data)=>{
     let fragment = document.createDocumentFragment();
 
     for(let i = 0; i < 2; i++){
         if(data[i]){
-            fragment.appendChild(logView(data[i]));
+            let container = document.createElement('div');
+            container.className="section-news";
+            container.innerHTML = logView(data[i]);
+            container.addEventListener('click', (e)=>{
+                handleClickLog(data[i].link);
+            })
+            fragment.appendChild(container);
         }
     }
-
     document.getElementById('log-container').appendChild(fragment);
 }
 
